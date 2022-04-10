@@ -1,0 +1,72 @@
+// Responsive Design
+
+@media screen and (min-width:1024px){
+    body{
+        overflow: hidden;
+    }
+    .loginform-container{
+        .loginform-container__darkMode{
+            // background: red;
+            width:95%;
+            justify-content: flex-end;
+        }
+        .loginform-container__img{
+            // background:yellow;
+            margin-top: -150px;
+            width:50%;
+            height:70%;
+        }
+
+        .loginform-container__form{
+            // background:blue;
+            margin-top: -150px;
+            width:50%;
+            height:70%;
+            padding:30px;
+            display:flex;
+            flex-direction: column;
+            place-content: center;
+
+            .loginform-container-form__title{
+                text-align:center;
+            }
+
+        }
+    }
+
+
+
+
+    // darkMode
+    .loginform-container-light{
+        .loginform-container__darkMode-light{
+            // background: red;
+            width:95%;
+            justify-content: flex-end;
+        }
+
+        .loginform-container__img-light{
+
+            // background:yellow;
+            margin-top: -150px;
+            width:50%;
+            height:70%;
+        }
+
+
+        .loginform-container__form-light{
+            // background:blue;
+            margin-top: -150px;
+            width:50%;
+            height:70%;
+            padding:30px;
+            display:flex;
+            flex-direction: column;
+            place-content: center;
+
+            .loginform-container-form__title{
+                text-align: center;
+            }
+        }
+    }
+}

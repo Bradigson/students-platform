@@ -1,12 +1,20 @@
 import '../assets/styles/SignUpForm.scss';
+import '../assets/styles/SignUpResponsive.scss';
 import signUpImg from '../assets/imgs/darkMode/signupImg.svg';
 import signUpImgLight from '../assets/imgs/lightMode/signUpImg.svg';
+import { handleInvalidEmail, handleEmailExist, 
+        handlePassword6carcter, handleUserSuccess } from '../alerts/SignUpAlertValidation';
+import { handleInvalidEmailLight, handleEmailExistLight, 
+        handlePassword6carcterLight, handleUserSuccessLight } from '../alerts/SignUpAlertValidation';
 import { useState } from 'react';
 import {Link} from 'react-router-dom';
 import { handleEmptyInputEmail, handleEmptyInputPassword, 
         handleEmptyInputEmailLight, handleEmptyInputPasswordLight } from '../alerts/SignUpAlert';
+import app from '../firebase/Credenciales';
+import {getAuth, createUserWithEmailAndPassword} from 'firebase/auth';
+const auth = getAuth(app);
 
-const SignUpForm = ()=>{
+const SignUpForm = (props)=>{
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -19,8 +27,10 @@ const SignUpForm = ()=>{
         setPassword(e.target.value)
     }
 
-    const handleSubmit = (e)=>{
+    const handleSubmit = async(e)=>{
         e.preventDefault();
+        const Email = email;
+        const Password = password;
         if(email === ''){
             if(darkMode){
                 handleEmptyInputEmail();
@@ -32,6 +42,53 @@ const SignUpForm = ()=>{
                 handleEmptyInputPassword();
             }else{
                 handleEmptyInputPasswordLight();
+            }
+        }else{
+            try{
+                await createUserWithEmailAndPassword(auth, Email, Password);
+                if(darkMode){
+                    handleUserSuccess();
+                    setEmail('');
+                    setPassword('');    
+                }else{
+                    handleUserSuccessLight();
+                    setEmail('');
+                    setPassword('');
+                }
+                
+            }catch(err){
+                if(err.code === 'auth/invalid-email'){
+                    if(darkMode){
+                        handleInvalidEmail();
+                        setEmail('');
+                    }else{
+                        handleInvalidEmailLight();
+                        setEmail('');
+                    }
+                }else if(err.code === 'auth/email-already-in-use'){
+                    if(darkMode){
+                        handleEmailExist();
+                        setEmail('');
+                    }else{
+                        handleEmailExistLight();
+                        setEmail('');
+                    }
+                }
+                else if(Password.length < 6 ){
+                    if(darkMode){
+                        handlePassword6carcter();
+                    }else{
+                        handlePassword6carcterLight();
+                    }
+
+                }
+                else if(err.code === 'auth/weak-password'){
+                    if(darkMode){
+                        handlePassword6carcter();
+                    }else{
+                        handlePassword6carcterLight();
+                    }
+                }
             }
         }
     }
@@ -48,13 +105,14 @@ const SignUpForm = ()=>{
                 : 'btn btn-darkMode-light' }`} onClick={handleDarkMode}>{darkMode ? <i className='bx bx-sun' ></i> 
                 :<i className='bx bxs-moon' ></i> }</button>
             </div>
-            <div className={`${darkMode ? 'ignuoform-container__img' : 'ignuoform-container__img-light'}`}>
+            <div className={`${darkMode ? 'signuoform-container__img' : 'signuoform-container__img-light'}`}>
                 <img src={`${darkMode ?  signUpImg : signUpImgLight }`} alt=''/>
             </div>
-            <form className='signuoform-container__form' onSubmit={handleSubmit}>
+            <form className={`${darkMode ? 'signuoform-container__form' : 'signuoform-container__form-light'}`} 
+                    onSubmit={handleSubmit}>
                 <div className='signuoform-container-form__title'>
                     <h2 className={`${darkMode ? 'text-white' :''}`}>Create Account</h2>
-                    <p className='text-muted'>Please Login to continue.</p>
+                    <p className='text-muted'>Please signup to continue.</p>
                 </div>
                 <div className={`${darkMode ? 'input-group mt-3 signuoform-container-form__input' 
                 : 'input-group mt-3 signuoform-container-form__input-light'}`}>
@@ -83,7 +141,7 @@ const SignUpForm = ()=>{
                     className="form-control"
                     placeholder="password"
                     name='password'
-                    valuee={password}
+                    value={password}
                     onChange={handlePassword}
                     />
                 </div>
@@ -94,7 +152,7 @@ const SignUpForm = ()=>{
                 <div className='mt-4'>
                     <footer className='signuoform-container-form__footer'>
                         <p className='me-2 text-muted'>Already have an account?</p>
-                        <Link to=''>Sign in</Link>
+                        <Link to='/'>Log in</Link>
                     </footer>
                 </div>
             </form>

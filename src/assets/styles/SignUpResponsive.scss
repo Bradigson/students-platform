@@ -1,0 +1,77 @@
+// Responsive Design
+
+@media screen and (min-width:1024px){
+    body{
+        overflow: hidden;
+    }
+    .signuoform-container{
+        .signuoform-container__darkMode{
+            // background: red;
+            width:95%;
+            justify-content: flex-end;
+        }
+        .signuoform-container__img{
+            // background:yellow;
+            margin-top: -150px;
+            width:50%;
+            height:70%;
+        }
+
+        .signuoform-container__form{
+            // background:blue;
+            margin-top: -150px;
+            width:50%;
+            height:70%;
+            padding:30px;
+            display:flex;
+            flex-direction: column;
+            place-content: center;
+
+            .signuoform-container-form__title{
+                text-align:center;
+            }
+
+        }
+    }
+
+
+
+
+
+
+
+
+
+    // darkMode
+    .signuoform-container-light{
+        .signuoform-container__darkMode-light{
+            // background: red;
+            width:95%;
+            justify-content: flex-end;
+        }
+
+        .signuoform-container__img-light{
+
+            // background:yellow;
+            margin-top: -150px;
+            width:50%;
+            height:70%;
+        }
+
+
+        .signuoform-container__form-light{
+            // background:blue;
+            margin-top: -150px;
+            width:50%;
+            height:70%;
+            padding:30px;
+            display:flex;
+            flex-direction: column;
+            place-content: center;
+
+            .signuoform-container-form__title{
+                text-align: center;
+            }
+        }
+    }
+}

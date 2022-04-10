@@ -1,7 +1,5 @@
-@use 'Variables.scss';
+.loginform-container{
 
-.signuoform-container{
-    
     background:#1c2135;
     transition: all 1s;;
     height:100vh;
@@ -10,11 +8,8 @@
     align-items: center;
     flex-wrap: wrap;
 
-    body{
-        background:#1c2135;
-    }
 
-    .signuoform-container__darkMode{
+    .loginform-container__darkMode{
         width:90%;
         display:flex;
         justify-content: center;
@@ -22,25 +17,35 @@
 
 
         .btn-darkMode{
-            // background:red;
             display:flex;
             justify-content: center;
             align-items: center;
             box-shadow: none;
+
         }
+
         .bx-sun{
             font-size:30px;
             font-weight: 500;
             color:#ffba49;
+            
+            
         }
-        
-        
+    
     }
 
 
-    .signuoform-container__img{
+
+
+
+
+
+
+     // img
+
+     .loginform-container__img{
         width:95%;
-        height:34%;
+        height:35%;
         // background: rebeccapurple;
         display:flex;
         justify-content: center;
@@ -48,45 +53,57 @@
         
         
     }
-    .signuoform-container__img > img{
+    .loginform-container__img > img{
         width:90%;
         height: 90%;
         object-fit: 90%;
         object-position: center;
     }
 
-    .signuoform-container__form{
+
+
+
+
+
+
+
+
+    // form
+
+    .loginform-container__form{
         // background:red;
         width:95%;
         height:55%;
         padding:10px;
 
-        .signuoform-container-form__input > input{
+        .loginform-container-form__input > input{
             background:rgba(255,255,255,.1);
             line-height: 3;
-            border-radius: Variables.$BorderRadius;
+            border-radius:10px;
             border:none;
             color:#fff;
+            box-shadow: none;
             
         }
-        .signuoform-container-form__input > input::placeholder{
+        
+        .loginform-container-form__input > input::placeholder{
             font-size: 17px;
         }
 
         
-        .signuoform-container-form__input > span{
+        .loginform-container-form__input > span{
             background:rgba(255,255,255,.1);
             border:none;
             outline: none;
             padding:0 18px 0 18px;
-            border-radius: Variables.$BorderRadius;
+            border-radius:10px;
 
             .bx-envelope, .bx-lock-alt{
                 font-size: 25px;
             }
         }
 
-        .signuoform-container-form__button{
+        .loginform-container-form__button{
             // background:green;
 
             .btn{
@@ -100,20 +117,14 @@
         }
 
         
-            .signuoform-container-form__footer{
+            .loginform-container-form__footer{
                 // background: blue;
                 display: flex;
                 justify-content: center;
 
-
-
-                
-                
             }
-
         
     }
-    
 }
 
 
@@ -134,8 +145,43 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // darMode
-.signuoform-container-light{
+.loginform-container-light{
     background:#fff;
     transition: all 1s;
     height:100vh;
@@ -145,7 +191,7 @@
     flex-wrap: wrap;
 
 
-    .signuoform-container__darkMode-light{
+    .loginform-container__darkMode-light{
         // background:red;
         width:90%;
         display:flex;
@@ -168,7 +214,21 @@
 
     }
 
-    .signuoform-container__img-light{
+
+
+
+
+
+
+
+
+
+
+
+
+    // img
+
+    .loginform-container__img-light{
         width:95%;
         height:34%;
         // background: rebeccapurple;
@@ -178,7 +238,7 @@
         
         
     }
-    .signuoform-container__img-light > img{
+    .loginform-container__img-light > img{
         width:90%;
         height: 90%;
         object-fit: 90%;
@@ -187,46 +247,62 @@
     }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // form-Darkmode
 
-    .signuoform-container__form-light{
+    .loginform-container__form-light{
         // background:red;
         width:95%;
         height:55%;
         padding:10px;
-        .signuoform-container-form__title{
+        .loginform-container-form__title{
             color:#262626;
         }
 
-        .signuoform-container-form__input-light > input{
+        .loginform-container-form__input-light > input{
             
             box-shadow: none;
             background:#eee;
             line-height: 3;
-            border-radius: Variables.$BorderRadius;
+            border-radius: 10px;
             border:none;
             color:#262626;
             
         }
-        .signuoform-container-form__input-light > input::placeholder{
+        .loginform-container-form__input-light > input::placeholder{
             font-size: 17px;
         }
 
         
-        .signuoform-container-form__input-light > span{
+        .loginform-container-form__input-light > span{
            
             background:#eee;
             border:none;
             outline: none;
             padding:0 18px 0 18px;
-            border-radius: Variables.$BorderRadius;
+            border-radius: 10px;
 
             .bx-envelope, .bx-lock-alt{
                 font-size: 25px;
             }
         }
 
-        .signuoform-container-form__button-light{
+        .loginform-container-form__button-light{
             // background:green;
 
             .btn{
@@ -240,23 +316,14 @@
         }
 
         
-            .signuoform-container-form__footer{
+            .loginform-container-form__footer{
                 // background: blue;
                 display: flex;
                 justify-content: center;
-                
-            }
 
-        
+            }
     }
 }
-
-
-
-
-
-
-
 
 
 
