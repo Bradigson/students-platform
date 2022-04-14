@@ -1,0 +1,43 @@
+.calificacion{
+    .calificacion__header{
+        color:#eee;
+        position: fixed;
+        top:0;
+        width:100%;
+        background:#0b2545;
+        padding-top:70px;
+        text-align: center;
+    }
+
+    .calificacion__score{
+        // margin-top:136px;
+        height: 100vh;
+        // background: red;
+        display: flex;
+        align-items: center;
+        place-content: center;
+        flex-direction: column;
+        text-align: center;
+
+        .calificacion-score__point{
+            // background: blueviolet;
+            width:100%;
+            padding:10px;
+            display: flex;
+            justify-content: center;
+
+            h2{
+                font-size: 90px;
+                background: #eee;
+                width:38%;
+                height:100%;
+                border-radius:20rem;
+                padding:15px;
+            }
+        }
+        .calificacion-score__comment{
+            // background: yellow;
+            width:100%;
+        }
+    }
+}
