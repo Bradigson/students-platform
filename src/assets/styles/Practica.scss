@@ -1,0 +1,37 @@
+.practica{
+    .practica__header{
+        background:#0b2545;
+        height:20vh;
+        padding-top:70px;
+        color:#eee;
+        text-align: center;
+        position:fixed;
+        width:100%;
+        z-index: 99;
+        top:0;
+    }
+
+    .practicas__descripcion{
+        background: #eee;
+        padding:30px 5px 5px 5px;
+        margin-top:135px;
+
+        .alert{
+            display: grid;
+            justify-content: space-between;
+            
+            .practicas-descripcion__title{
+                font-size: 22px;
+            }
+            .bx-check{
+                margin-right:20px;
+                color:#808080;
+                opacity:.4
+            }
+            .bx-chevron-right, .bx-check{
+                font-size: 40px;
+            }
+        }
+
+    }
+}
