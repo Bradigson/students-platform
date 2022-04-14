@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {Link } from 'react-router-dom';
+import {Link, useNavigate } from 'react-router-dom';
 import LogInImg from '../assets/imgs/darkMode/logInImg.svg';
 import LogInImgLight from '../assets/imgs/lightMode/logInImg.svg';
 import '../assets/styles/LogInForm.scss';
@@ -17,7 +17,7 @@ const LogInForm = (props)=>{
     const [darkMode, setDarkMode] = useState(true);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('')
-
+    const navigate = useNavigate();
     
     const handleEmail = e=>{
         setEmail(e.target.value);
@@ -49,7 +49,9 @@ const LogInForm = (props)=>{
                 if(darkMode){
                     handleWelcome();
                     setEmail('');
-                    setPassword('')
+                    setPassword('');
+                    navigate('homepage/inicio')
+
                 }else{
                     handleWelcomelight();
                     setEmail('');
