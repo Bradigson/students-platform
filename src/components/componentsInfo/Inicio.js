@@ -1,4 +1,5 @@
 import '../../assets/styles/Inicio.scss';
+import '../../assets/styles/mediaqueries/InicioMediaQueries.scss';
 import studentLogo from '../../assets/imgs/studentLogo.png';
 
 const Inicio = (props)=>{

@@ -1,4 +1,6 @@
 import '../../assets/styles/ProgresoSemanal.scss';
+import '../../assets/styles/mediaqueries/ProgresoSemanalMediaQueries.scss';
+
 const ProgresoSemanal = (props)=>{
     return(
         <div className="progreso">

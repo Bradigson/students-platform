@@ -1,0 +1,39 @@
+.practica{
+    .practicas__descripcion{
+        padding-top:70px;
+    }
+}
+
+@media screen and (max-width:320px){
+    .practica{
+        .practica__header{
+            height: 25vh;
+        }
+    }
+}
+
+
+
+@media screen and (max-width:820px){
+    .practica{
+        .practica__header{
+            height: 18vh;
+        }
+
+        .practica__header{
+            h1{
+                font-size: 50px;
+            }
+
+            span{
+                font-size: 20px;
+            }
+        }
+
+        .practicas__descripcion{
+            margin-top: 230px;
+            background: #fff;
+            padding:20px;
+        }
+    }
+}

@@ -1,4 +1,6 @@
 import '../../assets/styles/Calificacion.scss';
+import '../../assets/styles/mediaqueries/CalificacionMediaQueries.scss';
+
 const Calificaciones = (props)=>{
     return(
        <div className="calificacion">

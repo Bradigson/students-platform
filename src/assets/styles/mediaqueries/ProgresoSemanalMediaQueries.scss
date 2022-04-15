@@ -1,0 +1,70 @@
+@media screen and (min-width:414px){
+    .progreso{
+        .table{
+            margin-top:180px;
+        }
+    }
+}
+
+@media screen and (max-width:360px){
+    .progreso{
+        .table{
+            margin-top:148px;
+            .thead{
+                font-size: 13px;
+                // background: wheat;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width:412px){
+    .progreso{
+        .table{
+            margin-top:184px;
+           
+        }
+    }
+}
+
+
+
+@media screen and (max-width:320px){
+    .progreso{
+        .propgreso__title{
+            // background: rebeccapurple;
+            height:25vh;
+        }
+        .table{
+            margin-top: 143px;
+        }
+    }
+}
+
+@media screen and (max-width:820px){
+    .progreso{
+        .propgreso__title{
+            // background: rebeccapurple;
+            height:25vh;
+            h2{
+                font-size: 50px;
+               
+            }
+            span{
+                font-size: 25px;
+            }
+        }
+        .table{
+            margin-top: 296px;
+            .thead{
+                // background: wheat;
+                font-size: 25px;
+                text-align: center;
+            }
+            td{
+                font-size: 25px;
+            }
+        }
+    }
+}

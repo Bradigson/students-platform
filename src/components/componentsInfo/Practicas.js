@@ -1,4 +1,6 @@
 import '../../assets/styles/Practica.scss';
+import '../../assets/styles/mediaqueries/PracticaMediaQueries.scss';
+
 const Practicas = (props)=>{
     return(
         <div className="practica">

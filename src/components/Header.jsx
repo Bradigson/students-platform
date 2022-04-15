@@ -1,13 +1,12 @@
 import React from 'react';
 import '../assets/styles/Header.scss';
+import '../assets/styles/mediaqueries/HeaderMediaQueries.scss';
 import {NavLink} from 'react-router-dom';
 class Header extends React.Component{
     constructor(props){
         super(props)
         this.state={
             menu : false,
-           
-            
         }
     }
 

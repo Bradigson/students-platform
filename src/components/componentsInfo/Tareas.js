@@ -1,4 +1,6 @@
 import '../../assets/styles/Tareas.scss';
+import '../../assets/styles/mediaqueries/TareaMediaQueries.scss';
+
 const Tareas = (props)=>{
     return(
         <div className='tareas'>
